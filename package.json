@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
-  },
+"scripts": {
+"dev": "tsx watch --clear-screen=false src/app.ts",
+"build": "tsc",
+"start": "node build/app.js",
+"deploy": "npm run build && npm run start"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
